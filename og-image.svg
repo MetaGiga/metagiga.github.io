@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#f6851b"/>
+<stop offset="1" stop-color="#d9631a"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<g transform="translate(100,180)">
+<rect width="120" height="120" rx="24" fill="#fff"/>
+<path d="M20 40 L60 22 L100 40 L88 96 L60 112 L32 96 Z" fill="#f6851b"/>
+</g>
+<text x="260" y="240" font-family="'Hiragino Kaku Gothic ProN',system-ui,sans-serif" font-size="56" font-weight="900" fill="#fff">メタマスクウォレット</text>
+<text x="260" y="320" font-family="'Hiragino Kaku Gothic ProN',system-ui,sans-serif" font-size="48" font-weight="700" fill="#fff">ダウンロードガイド</text>
+<text x="260" y="400" font-family="'Hiragino Kaku Gothic ProN',system-ui,sans-serif" font-size="26" font-weight="400" fill="#fff" opacity="0.95">2026年版 · 公式情報ベースの日本語セットアップ手順</text>
+<rect x="260" y="440" width="260" height="56" rx="8" fill="#fff"/>
+<text x="390" y="477" font-family="'Hiragino Kaku Gothic ProN',system-ui,sans-serif" font-size="22" font-weight="700" fill="#f6851b" text-anchor="middle">今すぐダウンロード</text>
+</svg>

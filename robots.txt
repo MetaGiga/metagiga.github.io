@@ -1,0 +1,39 @@
+# robots.txt for https://metagiga.github.io/
+# Last updated: 2026-04-17
+
+User-agent: *
+Allow: /
+Disallow: /search/
+Disallow: /*?s=
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /tag/
+Disallow: /*?ref=
+Disallow: /tmp/
+Disallow: /private/
+
+# Major search engines - explicit allow
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Sitemap location
+Sitemap: https://metagiga.github.io/sitemap.xml
+
+# Host directive
+Host: metagiga.github.io
