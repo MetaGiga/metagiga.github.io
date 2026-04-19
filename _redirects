@@ -1,0 +1,6 @@
+# Force canonical host — Netlify auto-handles HTTPS
+# Normalize index.html to root
+/index.html  /  301
+
+# Fallback to 404 page
+/*  /404.html  404

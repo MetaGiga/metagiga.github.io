@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#fafbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+
+<title>メタマスクウォレットダウンロードで暗号資産管理を開始</title>
+<meta name="description" content="メタマスクウォレットダウンロードから初期設定までを丁寧に説明するガイド セキュリティ対策や利用の基本も網羅">
+<meta name="keywords" content="メタマスク, メタマスク ログイン, メタマスク ダウンロード">
+<meta name="author" content="佐藤 健一">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow">
+
+<link rel="canonical" href="https://metagiga.github.io/">
+<link rel="alternate" hreflang="ja" href="https://metagiga.github.io/">
+<link rel="alternate" hreflang="ja-JP" href="https://metagiga.github.io/">
+<link rel="alternate" hreflang="x-default" href="https://metagiga.github.io/">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" href="/og-cover.svg" as="image" type="image/svg+xml" fetchpriority="low">
+<link rel="preconnect" href="https://metagiga.github.io" crossorigin>
+<link rel="dns-prefetch" href="https://metagiga.github.io">
+
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MetaGiga">
+<meta property="og:title" content="メタマスクウォレットダウンロードで暗号資産管理を開始">
+<meta property="og:description" content="メタマスクウォレットダウンロードから初期設定までを丁寧に説明するガイド セキュリティ対策や利用の基本も網羅">
+<meta property="og:url" content="https://metagiga.github.io/">
+<meta property="og:image" content="https://metagiga.github.io/og-cover.svg">
+<meta property="og:image:secure_url" content="https://metagiga.github.io/og-cover.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="メタマスクウォレットダウンロードガイド - MetaGiga">
+<meta property="article:published_time" content="2026-04-19T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-04-19T09:00:00+09:00">
+<meta property="article:author" content="佐藤 健一">
+<meta property="article:section" content="暗号資産">
+<meta property="article:tag" content="メタマスク">
+<meta property="article:tag" content="メタマスク ダウンロード">
+<meta property="article:tag" content="メタマスク ログイン">
+<meta property="article:tag" content="暗号資産ウォレット">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="メタマスクウォレットダウンロードで暗号資産管理を開始">
+<meta name="twitter:description" content="メタマスクウォレットダウンロードから初期設定までを丁寧に説明するガイド セキュリティ対策や利用の基本も網羅">
+<meta name="twitter:image" content="https://metagiga.github.io/og-cover.svg">
+<meta name="twitter:image:alt" content="メタマスクウォレットダウンロードガイド - MetaGiga">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","@id":"https://metagiga.github.io/#website","name":"MetaGiga","alternateName":"メタギガ","url":"https://metagiga.github.io/","inLanguage":"ja-JP","description":"メタマスクをはじめとする暗号資産ウォレットの導入ガイド","publisher":{"@id":"https://metagiga.github.io/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://metagiga.github.io/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","@id":"https://metagiga.github.io/#organization","name":"MetaGiga","alternateName":"メタギガ","url":"https://metagiga.github.io/","logo":{"@type":"ImageObject","@id":"https://metagiga.github.io/#logo","url":"https://metagiga.github.io/favicon.svg","contentUrl":"https://metagiga.github.io/favicon.svg","width":512,"height":512,"caption":"MetaGiga"},"image":{"@id":"https://metagiga.github.io/#logo"},"sameAs":["https://github.com/metagiga"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@metagiga.github.io","availableLanguage":["Japanese"]}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","@id":"https://metagiga.github.io/#author","name":"佐藤 健一","givenName":"健一","familyName":"佐藤","url":"https://metagiga.github.io/#author-bio","jobTitle":"暗号資産リサーチャー","description":"ブロックチェーンおよび暗号資産分野で8年以上の実務経験を持つリサーチャー","knowsAbout":["ブロックチェーン","暗号資産","イーサリアム","Web3","メタマスク","分散型金融","スマートコントラクト"],"worksFor":{"@id":"https://metagiga.github.io/#organization"},"sameAs":["https://github.com/metagiga"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://metagiga.github.io/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://metagiga.github.io/"},{"@type":"ListItem","position":2,"name":"ガイド","item":"https://metagiga.github.io/#guide"},{"@type":"ListItem","position":3,"name":"メタマスクウォレットダウンロード"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://metagiga.github.io/#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://metagiga.github.io/"},"headline":"メタマスクウォレットダウンロードで暗号資産管理を開始","description":"メタマスクウォレットダウンロードから初期設定までを丁寧に説明するガイド セキュリティ対策や利用の基本も網羅","inLanguage":"ja-JP","datePublished":"2026-04-19T09:00:00+09:00","dateModified":"2026-04-19T09:00:00+09:00","wordCount":5900,"articleSection":"暗号資産","keywords":["メタマスク","メタマスク ログイン","メタマスク ダウンロード","暗号資産ウォレット","Web3"],"image":{"@type":"ImageObject","url":"https://metagiga.github.io/og-cover.svg","width":1200,"height":630},"author":{"@id":"https://metagiga.github.io/#author"},"publisher":{"@id":"https://metagiga.github.io/#organization"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".speakable"]},"about":[{"@type":"Thing","name":"MetaMask"},{"@type":"Thing","name":"暗号資産ウォレット"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"メタマスクのダウンロードは無料ですか","acceptedAnswer":{"@type":"Answer","text":"メタマスクのアプリおよびブラウザ拡張機能は無料で提供されています。ネットワーク手数料であるガス代は取引時に別途発生します。"}},{"@type":"Question","name":"メタマスク ログインができない場合はどうすればよいですか","acceptedAnswer":{"@type":"Answer","text":"パスワードが正しいかを確認し、それでも開けないときはシークレットリカバリーフレーズを使ってウォレットを復元してください。復元後に新しいパスワードを設定することで再度ログインが可能になります。"}},{"@type":"Question","name":"シークレットリカバリーフレーズを紛失した場合は復旧できますか","acceptedAnswer":{"@type":"Answer","text":"シークレットリカバリーフレーズを紛失した場合、ウォレット内の資産へアクセスする手段はありません。運営元を含め第三者が復旧することはできない設計のため、オフライン環境での厳重な保管が前提となります。"}},{"@type":"Question","name":"複数端末で同じウォレットを使えますか","acceptedAnswer":{"@type":"Answer","text":"使えます。既存ウォレットの復元機能でシークレットリカバリーフレーズを入力すれば、別端末でも同じアドレスと残高が共有されます。"}},{"@type":"Question","name":"取引所のアカウントとメタマスクは同じものですか","acceptedAnswer":{"@type":"Answer","text":"別物です。取引所はカストディアル型で事業者が資産を預かりますが、メタマスクは利用者自身が秘密鍵を保有するノンカストディアル型のウォレットです。"}}]}
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px;text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.8;color:#1a1d29;background:#fafbfd;font-feature-settings:"palt" 1,"pkna" 1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;word-break:normal;overflow-wrap:break-word;line-break:strict;min-height:100vh;min-height:100dvh}
+img,svg,video,picture{max-width:100%;height:auto;display:block}
+a{color:#1e3faf;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-skip-ink:auto}
+a:hover{color:#132870;text-decoration-thickness:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible,[role="button"]:focus-visible{outline:3px solid #ffb020;outline-offset:2px;border-radius:3px}
+button{font:inherit;cursor:pointer;border:0;background:transparent;color:inherit;letter-spacing:inherit}
+:root{--bg:#fafbfd;--surface:#ffffff;--surface-2:#f3f5fa;--ink:#1a1d29;--ink-soft:#4a5068;--ink-muted:#6b7388;--brand:#f6851b;--brand-dark:#b85d00;--brand-soft:#fff3e5;--brand-fg:#8a3e00;--accent:#1e3faf;--border:#e4e7ef;--border-strong:#cdd2e0;--ok:#0a6b44;--warn:#a53300;--shadow:0 1px 2px rgba(10,14,28,.06),0 4px 12px rgba(10,14,28,.04);--radius:12px;--max:960px}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1020;--surface:#141a2e;--surface-2:#1b2240;--ink:#ebeef8;--ink-soft:#c7cee3;--ink-muted:#8b94b0;--brand:#ff9a3d;--brand-dark:#ffb266;--brand-soft:#3a2610;--brand-fg:#ffcc99;--accent:#8ba8ff;--border:#2a3148;--border-strong:#3a4265;--ok:#4ecb8c;--warn:#ff8866;--shadow:0 2px 6px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.25)}body{color:var(--ink);background:var(--bg)}a{color:var(--accent)}a:hover{color:#b5c7ff}}
+::selection{background:var(--brand);color:#fff}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;z-index:1000;background:#0b1020;color:#fff;padding:12px 16px;text-decoration:none;border-radius:6px;outline:3px solid #ffb020}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border);contain:layout style}
+@supports (backdrop-filter:blur(10px)){.site-header{background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px)}}
+@media (prefers-reduced-transparency:reduce){.site-header{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
+.header-inner{max-width:var(--max);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:17px;letter-spacing:.02em;min-height:44px}
+.brand:hover{text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#f6851b 0%,#cc6a00 100%);display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px;flex:none;box-shadow:var(--shadow)}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap}
+.nav-links a{padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--ink-soft);font-size:14px;font-weight:500;min-height:44px;display:inline-flex;align-items:center}
+.nav-links a:hover{background:var(--brand-soft);color:var(--brand-fg);text-decoration:none}
+.nav-toggle{display:none;width:44px;height:44px;border-radius:8px;background:var(--surface-2);align-items:center;justify-content:center;font-size:22px;color:var(--ink)}
+.nav-toggle:hover{background:var(--brand-soft);color:var(--brand-fg)}
+@media (max-width:720px){.nav-links{position:absolute;top:60px;left:0;right:0;flex-direction:column;background:var(--surface);border-bottom:1px solid var(--border);padding:8px 16px;gap:2px;display:none;box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a{width:100%;padding:14px 12px}.nav-toggle{display:inline-flex}}
+.crumb{max-width:var(--max);margin:0 auto;padding:18px 20px 0;font-size:13px;color:var(--ink-soft)}
+.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.crumb li{display:inline-flex;align-items:center;gap:6px}
+.crumb li+li::before{content:"›";color:var(--ink-muted);font-weight:400}
+.crumb a{color:var(--ink-soft);text-decoration:none}
+.crumb a:hover{color:var(--brand-fg);text-decoration:underline}
+.crumb [aria-current="page"]{color:var(--ink);font-weight:500}
+.hero{max-width:var(--max);margin:0 auto;padding:28px 20px 32px}
+.hero h1{font-size:clamp(25px,4.2vw,36px);line-height:1.38;font-weight:800;letter-spacing:.005em;color:var(--ink);margin-bottom:18px}
+.lead{font-size:clamp(16px,2.1vw,17px);line-height:1.95;color:var(--ink-soft);max-width:720px}
+.lead strong{color:var(--ink);font-weight:700}
+.meta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:24px;font-size:13px;color:var(--ink-muted)}
+.meta-row .dot{width:4px;height:4px;border-radius:50%;background:var(--border-strong);flex:none}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{display:inline-block;padding:6px 12px;background:var(--brand-soft);color:var(--brand-fg);border-radius:999px;font-size:12px;font-weight:600;border:1px solid var(--border);line-height:1.4}
+.toc{max-width:var(--max);margin:0 auto 24px;padding:0 20px}
+.toc-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow)}
+.toc-title{font-size:13px;font-weight:700;color:var(--ink-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.toc-box ol{list-style:none;counter-reset:toc}
+.toc-box li{counter-increment:toc;margin:8px 0}
+.toc-box li::before{content:counter(toc,decimal-leading-zero) ".";color:var(--brand-dark);font-weight:700;margin-right:10px;font-variant-numeric:tabular-nums;font-size:14px}
+.toc-box a{color:var(--ink);text-decoration:none;font-size:15px;line-height:1.6}
+.toc-box a:hover{color:var(--brand-fg);text-decoration:underline}
+.article{max-width:var(--max);margin:0 auto;padding:0 20px 56px}
+.article h2{font-size:clamp(20px,3.2vw,26px);line-height:1.5;font-weight:800;color:var(--ink);margin:56px 0 18px;padding-bottom:12px;border-bottom:2px solid var(--border);scroll-margin-top:80px;display:flex;align-items:baseline;gap:12px}
+.article h2::before{content:"";display:inline-block;width:6px;height:22px;background:linear-gradient(180deg,var(--brand) 0%,var(--brand-dark) 100%);vertical-align:-3px;border-radius:2px;flex:none;align-self:center}
+.article h3{font-size:clamp(17px,2.4vw,20px);line-height:1.55;font-weight:700;color:var(--ink);margin:32px 0 12px;scroll-margin-top:80px;display:flex;align-items:baseline;gap:8px}
+.article h3::before{content:"";display:inline-block;width:8px;height:8px;background:var(--brand);border-radius:2px;flex:none;align-self:center}
+.article p{margin:14px 0;color:var(--ink);font-size:16px;line-height:1.95}
+.article ul,.article ol{margin:14px 0 14px 8px;padding-left:20px}
+.article li{margin:8px 0;color:var(--ink);line-height:1.85}
+.article li::marker{color:var(--brand-dark)}
+.article strong{font-weight:700;color:var(--ink);background:linear-gradient(transparent 62%,var(--brand-soft) 62%);padding:0 2px}
+.note,.warn{background:var(--surface);border-radius:8px;padding:16px 20px;margin:22px 0;color:var(--ink);box-shadow:var(--shadow)}
+.note{border-left:4px solid var(--brand)}
+.warn{border-left:4px solid var(--warn)}
+.note-title,.warn-title{font-weight:700;margin-bottom:6px;font-size:14px;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+.note-title{color:var(--brand-dark)}
+.warn-title{color:var(--warn)}
+.note-title::before,.warn-title::before{content:"";display:inline-block;width:16px;height:16px;border-radius:50%;flex:none}
+.note-title::before{background:var(--brand)}
+.warn-title::before{background:var(--warn)}
+.tbl-wrap{overflow-x:auto;margin:22px 0;border-radius:10px;border:1px solid var(--border);-webkit-overflow-scrolling:touch;background:var(--surface)}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:480px}
+.tbl caption{caption-side:top;text-align:left;padding:12px 14px;font-weight:700;color:var(--ink);font-size:13px;background:var(--surface-2);border-bottom:1px solid var(--border)}
+.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.7}
+.tbl thead th{background:var(--surface-2);font-weight:700;color:var(--ink);font-size:13px;letter-spacing:.02em;border-bottom:2px solid var(--border-strong)}
+.tbl tbody tr:last-child td{border-bottom:0}
+.tbl tbody tr:hover{background:var(--surface-2)}
+.steps{counter-reset:step;list-style:none;margin:22px 0!important;padding:0!important}
+.steps li{counter-increment:step;position:relative;padding:14px 16px 14px 58px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:10px!important;box-shadow:var(--shadow)}
+.steps li::before{content:counter(step);position:absolute;left:14px;top:14px;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--brand) 0%,var(--brand-dark) 100%);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px;font-variant-numeric:tabular-nums}
+.steps li::marker{content:""}
+.author-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;display:flex;gap:20px;align-items:flex-start;box-shadow:var(--shadow);margin-top:40px;scroll-margin-top:80px}
+.author-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#f6851b,#cc6a00);display:grid;place-items:center;color:#fff;font-weight:800;font-size:24px;flex:none;box-shadow:var(--shadow)}
+.author-name{font-size:17px;font-weight:700;margin-bottom:4px;color:var(--ink)}
+.author-role{font-size:13px;color:var(--ink-muted);margin-bottom:10px}
+.author-bio{font-size:14px;color:var(--ink-soft);line-height:1.85}
+.author-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.author-links a{font-size:12px;padding:6px 10px;background:var(--surface-2);border:1px solid var(--border);border-radius:6px;color:var(--ink-soft);text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
+.author-links a:hover{background:var(--brand-soft);color:var(--brand-fg);border-color:var(--brand)}
+@media (max-width:520px){.author-card{flex-direction:column;gap:14px}}
+.site-footer{background:var(--surface);border-top:1px solid var(--border);margin-top:56px;padding:32px 20px;color:var(--ink-soft);font-size:13px}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.footer-copy{line-height:1.7}
+.footer-links{display:flex;flex-wrap:wrap;gap:4px}
+.footer-links button,.footer-links a{padding:10px 14px;min-height:44px;min-width:44px;background:transparent;color:var(--ink-soft);border-radius:8px;font-size:13px;text-decoration:none;display:inline-flex;align-items:center;border:1px solid transparent;cursor:pointer}
+.footer-links button:hover,.footer-links a:hover{background:var(--brand-soft);color:var(--brand-fg);border-color:var(--border)}
+.modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal[aria-hidden="false"]{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(10,14,28,.65);cursor:pointer}
+@supports (backdrop-filter:blur(4px)){.modal-backdrop{backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}}
+@media (prefers-reduced-transparency:reduce){.modal-backdrop{background:rgba(10,14,28,.85);backdrop-filter:none;-webkit-backdrop-filter:none}}
+.modal-dialog{position:relative;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:14px;max-width:720px;width:100%;max-height:85vh;max-height:85dvh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.45);padding:26px 28px}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;border-bottom:1px solid var(--border);padding-bottom:14px;position:sticky;top:-26px;background:var(--surface);margin-top:-26px;padding-top:26px;z-index:2}
+.modal-title{font-size:20px;font-weight:800;color:var(--ink)}
+.modal-close{min-width:44px;min-height:44px;border-radius:8px;background:var(--surface-2);color:var(--ink);font-size:22px;font-weight:700;line-height:1;display:grid;place-items:center;border:1px solid var(--border)}
+.modal-close:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+.modal-body h3[role="heading"],.modal-body [role="heading"]{font-size:15px;font-weight:700;margin:18px 0 6px;color:var(--ink)}
+.modal-body>[role="heading"]:first-child{margin-top:0}
+.modal-body p{font-size:14px;line-height:1.85;color:var(--ink-soft);margin:6px 0}
+.modal-body ul{margin:8px 0 8px 22px;padding-left:8px}
+.modal-body li{font-size:14px;color:var(--ink-soft);line-height:1.8;margin:4px 0}
+body.modal-open{overflow:hidden;touch-action:none}
+[inert]{pointer-events:none;cursor:default}
+@media print{.site-header,.site-footer,.toc,.nav-links,.nav-toggle,.modal{display:none!important}a{color:#000;text-decoration:underline}a::after{content:" (" attr(href) ")";font-size:.85em;color:#555}body{background:#fff;color:#000;font-size:12pt}.article h2,.article h3{page-break-after:avoid}.article p,.article li{orphans:3;widows:3}}
+@media (forced-colors:active){.site-header,.toc-box,.note,.warn,.tbl-wrap,.author-card,.modal-dialog{border:1px solid CanvasText}.brand-mark,.author-avatar,.steps li::before{border:1px solid CanvasText}a{color:LinkText}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="MetaGiga ホーム">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>MetaGiga</span>
+    </a>
+    <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
+    <nav class="nav-links" id="primary-nav" aria-label="主要ナビゲーション">
+      <a href="#download">ダウンロード</a>
+      <a href="#setup">初期設定</a>
+      <a href="#login">ログイン</a>
+      <a href="#security">セキュリティ</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumb" aria-label="パンくずリスト">
+  <ol>
+    <li><a href="/">ホーム</a></li>
+    <li><a href="#guide">ガイド</a></li>
+    <li aria-current="page">メタマスクウォレットダウンロード</li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<section class="hero" id="guide" aria-labelledby="page-title">
+  <h1 id="page-title">メタマスクウォレットダウンロードで暗号資産管理を開始</h1>
+  <p class="lead speakable">
+    <strong>メタマスク</strong>は、イーサリアムをはじめとする主要なブロックチェーンに対応した自己管理型のウォレットで、ブラウザ拡張機能とスマートフォン向けアプリの二つの形で提供されています。本記事では、公式サイトからの<strong>メタマスク ダウンロード</strong>手順、初回インストール後のシードフレーズ作成、日常的な<strong>メタマスク ログイン</strong>の操作、そして資産を守るためのセキュリティ対策までを、初めて利用する方でも迷わず進められるように順序立てて解説します。読み終えたときには、自分の環境に合ったインストール方法を選び、安全に運用を始めるための準備がすべて整っているはずです。
+  </p>
+  <div class="meta-row" role="group" aria-label="記事情報">
+    <span>執筆:<a href="#author-bio">佐藤 健一</a></span>
+    <span class="dot" aria-hidden="true"></span>
+    <span>公開日:<time datetime="2026-04-19">2026年4月19日</time></span>
+    <span class="dot" aria-hidden="true"></span>
+    <span>最終更新:<time datetime="2026-04-19">2026年4月19日</time></span>
+    <span class="dot" aria-hidden="true"></span>
+    <span>読了目安:約12分</span>
+  </div>
+  <div class="tag-row" aria-label="記事タグ">
+    <span class="tag">メタマスク</span>
+    <span class="tag">ダウンロード</span>
+    <span class="tag">ログイン</span>
+    <span class="tag">暗号資産</span>
+    <span class="tag">Web3</span>
+  </div>
+</section>
+
+<nav class="toc" aria-labelledby="toc-label">
+  <div class="toc-box">
+    <div class="toc-title" id="toc-label">目次</div>
+    <ol>
+      <li><a href="#about">メタマスクとは何ですか</a></li>
+      <li><a href="#download">メタマスク ダウンロードはどのように行いますか</a></li>
+      <li><a href="#setup">インストール後の初期設定はどう進めますか</a></li>
+      <li><a href="#login">メタマスク ログインの基本操作は</a></li>
+      <li><a href="#security">安全に利用するためのセキュリティ対策は何ですか</a></li>
+      <li><a href="#tips">日常利用で押さえておきたいポイントは</a></li>
+      <li><a href="#faq">よくある質問と回答</a></li>
+      <li><a href="#author-bio">執筆者について</a></li>
+    </ol>
+  </div>
+</nav>
+
+<article class="article" itemscope itemtype="https://schema.org/BlogPosting">
+
+  <h2 id="about">メタマスクとは何ですか</h2>
+  <p class="speakable">
+    メタマスクは、ConsenSys社の関連プロジェクトとして開発された、利用者自身が秘密鍵を保有する「ノンカストディアル」型のウォレットです。取引所のように事業者が資産を預かる仕組みとは異なり、鍵の管理責任は完全に利用者側にあります。そのぶん自由度が高く、分散型取引所やNFTマーケットプレイス、ブロックチェーンゲームといったWeb3アプリケーションに直接接続できるのが最大の特徴です。
+  </p>
+  <p>
+    利用の前提となるのは、イーサリアムネットワークおよびそれと互換性のあるEVMチェーンを扱う機会があるかどうかです。BNBチェーン、Polygon、Arbitrum、Optimism、Baseといった主要なレイヤー2やサイドチェーンにも手動で追加するだけで対応できるため、一つのウォレットで幅広いエコシステムをまたいで利用できます。
+  </p>
+
+  <h3>対応ブラウザとデバイス</h3>
+  <p>
+    ブラウザ拡張機能としては、Google Chrome、Mozilla Firefox、Microsoft Edge、Braveの各ストアに正式に登録されています。スマートフォン版はiOS向けにApp Store、Android向けにGoogle Playからそれぞれ配信されており、モバイル内蔵ブラウザによってWeb3サイトへ接続する使い方も可能です。iPadOSやAndroidタブレットでも同じアプリが動作します。
+  </p>
+
+  <h3>主な機能と利用シーン</h3>
+  <ul>
+    <li>イーサリアムや各種ERC-20トークンの送受信、残高確認</li>
+    <li>分散型取引所(DEX)でのスワップ機能(内部アグリゲーター経由)</li>
+    <li>NFTの閲覧、送付、コレクション管理</li>
+    <li>ガス代の手動調整、トランザクション履歴の参照</li>
+    <li>ハードウェアウォレット(Ledger、Trezorなど)との連携</li>
+    <li>複数ネットワーク切り替え、カスタムネットワーク追加</li>
+  </ul>
+
+  <div class="note" role="note">
+    <div class="note-title">はじめに把握しておきたいこと</div>
+    <p>メタマスクは「銀行口座」ではなく「鍵束」に近い存在です。パスワードを忘れても、シークレットリカバリーフレーズ(以下、シードフレーズ)さえあれば別の端末で完全に復元できますが、逆にいえばシードフレーズが第三者に渡れば、どれほど堅牢なパスワードを設定していても資産は取り戻せません。詳しいセキュリティの要点は<a href="#security">セキュリティ対策の章</a>で扱います。</p>
+  </div>
+
+  <h2 id="download">メタマスク ダウンロードはどのように行いますか</h2>
+  <p class="speakable">
+    メタマスクのダウンロードは、必ず公式サイトである metamask.io、もしくは各プラットフォームの公式ストアから行ってください。検索結果の上位に広告枠で表示される模倣サイトからインストールしてしまうと、見た目が同じでも内部でシードフレーズを抜き取るよう改変された偽アプリを掴まされる危険があります。ブックマークを利用する、URLを直接入力する、といった手順を習慣化することが最大の予防策です。
+  </p>
+
+  <h3>PC版(Chrome・Firefox・Edge・Brave)</h3>
+  <ol class="steps">
+    <li>公式サイト metamask.io へアクセスし、「Download」ボタンを押します。</li>
+    <li>使用中のブラウザに対応するストアページが開かれるため、そのまま「追加」を選びます。</li>
+    <li>インストール完了後、ブラウザ右上のパズルピースから拡張機能一覧を開き、メタマスクをピン留めしておくと以降の操作が簡単になります。</li>
+    <li>初回起動で利用規約への同意画面が表示されます。内容を確認のうえ進みます。</li>
+  </ol>
+  <p>
+    拡張機能のサイズは概ね10MB前後で、インストール自体は数十秒で完了します。企業ネットワークなどで拡張機能のインストールが制限されている場合は、管理者に許可設定を依頼する必要があります。
+  </p>
+
+  <h3>スマートフォン版(iOS・Android)</h3>
+  <ol class="steps">
+    <li>App StoreまたはGoogle Playで「MetaMask」を検索します。</li>
+    <li>提供元が「ConsenSys Software Inc.」(もしくは「MetaMask」)になっているかを必ず確認します。</li>
+    <li>インストール後にアプリを開き、新規作成か既存ウォレットの復元かを選択します。</li>
+    <li>画面ロックにはFace ID、Touch ID、指紋認証を設定できます。</li>
+  </ol>
+
+  <h3>公式サイトの見分け方</h3>
+  <div class="warn" role="note">
+    <div class="warn-title">模倣サイトに注意</div>
+    <p>正規URLは <strong>https://metamask.io</strong> のみです。「metarnask.io」「meta-mask.io」「metamaskwallet.io」のような類似ドメインは第三者による偽装の可能性があります。ダウンロードリンクに遷移する前に、アドレスバーのスペル、鍵アイコンによる証明書の正当性、ドメイン末尾を必ず確認してください。</p>
+  </div>
+
+  <div class="tbl-wrap" role="region" aria-label="プラットフォーム別ダウンロード情報" tabindex="0">
+    <table class="tbl">
+      <caption>メタマスク対応プラットフォームと入手先一覧</caption>
+      <thead>
+        <tr><th scope="col">プラットフォーム</th><th scope="col">入手先</th><th scope="col">推奨OS要件</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Google Chrome拡張</td><td>Chromeウェブストア</td><td>Chrome 最新版</td></tr>
+        <tr><td>Firefox拡張</td><td>Firefoxアドオン</td><td>Firefox 115以降</td></tr>
+        <tr><td>Edge拡張</td><td>Edgeアドオン</td><td>Edge 最新版</td></tr>
+        <tr><td>Brave拡張</td><td>Chromeウェブストア経由</td><td>Brave 最新版</td></tr>
+        <tr><td>iOSアプリ</td><td>App Store</td><td>iOS 14.0以降</td></tr>
+        <tr><td>Androidアプリ</td><td>Google Play</td><td>Android 8.0以降</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="setup">インストール後の初期設定はどう進めますか</h2>
+  <p>
+    インストールが済んだら、次に行うのは「新規ウォレットの作成」か「既存ウォレットの復元(インポート)」の選択です。初めて利用する方は新規作成を選び、画面に沿ってパスワード設定とシードフレーズの記録を進めていきます。ここで記録するシードフレーズが、そのウォレットの「最終的な所有権」そのものになります。
+  </p>
+
+  <h3>新規ウォレットの作成手順</h3>
+  <ol class="steps">
+    <li>起動画面で「ウォレットの作成」を選びます。</li>
+    <li>利用状況のデータ送信に関する同意を選択します(任意)。</li>
+    <li>新しいパスワードを設定します(後述のパスワード設計の指針を参照)。</li>
+    <li>シークレットリカバリーフレーズ(12個の単語)が表示されます。</li>
+    <li>表示された順序のまま、紙のノート等へ手書きで書き留めます。</li>
+    <li>確認のためフレーズの一部を画面上で並べ替えます。</li>
+    <li>完了メッセージが出れば、初期設定は終了です。</li>
+  </ol>
+
+  <h3>シードフレーズの管理で守るべき原則</h3>
+  <ul>
+    <li><strong>オフラインで保管する</strong>:紙、金属プレート、耐火金庫など物理的な媒体を優先します。</li>
+    <li><strong>写真・スクリーンショット・クラウドメモを残さない</strong>:オンライン上に置いた瞬間、漏洩リスクが跳ね上がります。</li>
+    <li><strong>他人に見せない・伝えない</strong>:公式サポートがフレーズを尋ねることは一切ありません。</li>
+    <li><strong>複数箇所に分散保管する</strong>:災害・紛失対策として物理的に離れた場所へ複製を置くのが理想です。</li>
+    <li><strong>順序も含めて正確に記録する</strong>:一語でも順番が違えば、同じウォレットには復元できません。</li>
+  </ul>
+
+  <h3>堅牢なパスワード設計</h3>
+  <p>
+    メタマスクのパスワードは、端末内に暗号化されたウォレット情報を解く鍵として働きます。シードフレーズを守れていれば端末の紛失そのものは致命傷にはなりませんが、共用PCや紛失時のリスク軽減のためにも、強度の高い設定を推奨します。
+  </p>
+  <ul>
+    <li>最低12文字以上、大文字・小文字・数字・記号を組み合わせる</li>
+    <li>他サービスとの使い回しは避ける</li>
+    <li>誕生日、電話番号、辞書に載る単語の連結は避ける</li>
+    <li>信頼できるパスワードマネージャに保存する</li>
+  </ul>
+
+  <h2 id="login">メタマスク ログインの基本操作は</h2>
+  <p class="speakable">
+    メタマスク ログインとは、インストール済みのウォレットをパスワードで解錠し、ブロックチェーン上の自分のアカウントを操作できる状態にすることを指します。取引所のような中央サーバーへの認証ではなく、あくまで手元の端末内の暗号化された鍵をパスワードで展開する仕組みです。そのため、インターネット接続がない環境でも残高表示までは可能で、送信操作の時点ではじめて通信が発生します。
+  </p>
+
+  <h3>PC(ブラウザ拡張)でのログイン</h3>
+  <ol class="steps">
+    <li>ブラウザ右上のピン留めされたキツネのアイコンを押します。</li>
+    <li>パスワード入力欄に設定済みのパスワードを入れて「ロック解除」を選択します。</li>
+    <li>最上部に表示されているアカウント名とアドレスが正しいかを確認します。</li>
+    <li>必要に応じて上部中央のネットワークセレクタから接続先ネットワークを切り替えます。</li>
+  </ol>
+
+  <h3>スマートフォンアプリでのログイン</h3>
+  <p>
+    アプリを開くとパスワード入力画面が表示されます。端末側の生体認証(Face ID、指紋認証)を有効化しておくと、以後はパスワード入力を省略して生体認証だけでロック解除できます。ただし、生体認証はあくまで利便性向上の補助であり、シードフレーズの代わりにはなりません。端末初期化後はパスワードかシードフレーズが必須となります。
+  </p>
+
+  <h3>ログインできないときの確認項目</h3>
+  <div class="tbl-wrap" role="region" aria-label="ログイン時のトラブルシューティング一覧" tabindex="0">
+    <table class="tbl">
+      <caption>メタマスク ログイン時の主な症状と対処方法</caption>
+      <thead>
+        <tr><th scope="col">症状</th><th scope="col">主な原因</th><th scope="col">対処方法</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>パスワードが通らない</td><td>スペース、英字の大小、全角入力</td><td>入力モードを半角英数に切り替え、貼り付けで再入力</td></tr>
+        <tr><td>拡張機能が起動しない</td><td>ブラウザのキャッシュ、拡張の無効化</td><td>ブラウザを再起動し、拡張機能の有効状態を確認</td></tr>
+        <tr><td>残高がゼロと表示される</td><td>ネットワーク選択違い</td><td>上部のネットワーク切替から正しいチェーンを選ぶ</td></tr>
+        <tr><td>アカウントが見当たらない</td><td>別のシードで作られたウォレット</td><td>「アカウントのインポート」または正しいシードで復元</td></tr>
+        <tr><td>完全に開けない</td><td>パスワード失念</td><td>シードフレーズで復元し、新しいパスワードを設定</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="security">安全に利用するためのセキュリティ対策は何ですか</h2>
+  <p>
+    自己管理型ウォレットにおいて、セキュリティは「仕組み」よりも「運用」で決まります。どれほど暗号技術が堅牢でも、利用者が偽サイトに鍵を渡してしまえば即座に資産を失います。ここでは、初心者が短期間で身につけるべき三層の防御を整理します。
+  </p>
+
+  <h3>フィッシング対策:偽サイトに鍵を渡さない</h3>
+  <ul>
+    <li>検索結果の<strong>広告欄</strong>からではなく、ブックマークや直接入力で公式サイトへ到達する習慣をつける。</li>
+    <li>メール、DM、コミュニティチャットで届くリンクは、原則として踏まない。</li>
+    <li>「シードフレーズを入力するだけで無料配布」「ウォレットの再検証が必要」といった文言は、ほぼ確実に詐欺です。</li>
+    <li>ブラウザ側のフィッシング警告が出た場合は迷わず閉じる。</li>
+  </ul>
+
+  <h3>秘密鍵・シードフレーズの保護</h3>
+  <p>
+    メタマスクには「シードフレーズの開示」と「個別アカウントの秘密鍵の開示」という二つの機能がありますが、どちらもその情報を外部に送信する機能ではありません。画面上で第三者に見せる、あるいはスクリーンショットとして保存するといった操作が最大の弱点になります。画面共有の最中に設定画面を開かない、という単純なルールを徹底してください。
+  </p>
+
+  <h3>承認(Approval)の取消を定期的に実施する</h3>
+  <p>
+    分散型アプリに接続するたびに、利用者はトークンの支払い上限など「承認(Approval)」を与えています。過去に接続した無名のサイトへ与えた承認が残っていると、そのサイト側の脆弱性を突かれた際に資産が流出する可能性があります。定期的にEtherscan等の「Token Approval」ツールを使い、不要な承認は取り消しておくのが安全運用の基本です。
+  </p>
+
+  <div class="note" role="note">
+    <div class="note-title">大きな資産を扱う場合の追加対策</div>
+    <p>日常利用を超える残高を持つ方は、秘密鍵がPC内に平文で置かれないハードウェアウォレット(LedgerやTrezor)との連携を推奨します。メタマスクはそれらと連携する「署名画面」として動作し、鍵そのものは物理デバイス内に留まるため、マルウェア感染時の耐性が大きく向上します。</p>
+  </div>
+
+  <h2 id="tips">日常利用で押さえておきたいポイントは</h2>
+  <p>
+    実際の運用に入ると、ガス代、ネットワーク選択、ブリッジといった要素が日々の操作に関わってきます。ここでは、最初の数週間で直面しやすい論点を短くまとめます。
+  </p>
+
+  <h3>ガス代の仕組みを理解する</h3>
+  <p>
+    ガス代は送金やスワップなどの処理をネットワークに依頼する際に支払う手数料で、ネイティブ通貨(イーサリアム本体ならETH)建てで徴収されます。ネットワークが混雑している時間帯は高く、閑散時間帯は安くなるため、緊急性がない送金は時間を選ぶだけでも節約につながります。レイヤー2(Arbitrum、Optimism、Baseなど)へ移行すれば、同じ操作でもガス代が数分の一から数十分の一になります。
+  </p>
+
+  <h3>ネットワーク切り替えとカスタム追加</h3>
+  <p>
+    メタマスク上部のネットワークセレクタから、標準搭載されたチェーンを選択できます。標準で表示されない新興チェーンを使う場合は、チェーンID、RPC URL、通貨記号、ブロックエクスプローラURLを手動で追加します。ただし、未知のRPC URLを入力するのは、偽のネットワークへ誘導される危険を伴うため、必ず公式ドキュメントに記載された値のみを使ってください。
+  </p>
+
+  <h3>ブリッジを使うときの注意</h3>
+  <ul>
+    <li>公式または広く知られたブリッジのみを利用する。</li>
+    <li>少額でテスト送金を行ってから本送金する。</li>
+    <li>送付先アドレスは手入力ではなくコピー&amp;ペーストで、さらに先頭・末尾の数文字を目視確認する。</li>
+  </ul>
+
+  <h2 id="faq">よくある質問と回答</h2>
+
+  <h3>メタマスクのダウンロードは無料ですか</h3>
+  <p>
+    メタマスクのアプリおよびブラウザ拡張機能自体は無料で提供されています。取引時に発生するネットワーク手数料(ガス代)は、メタマスクの運営側に支払うものではなく、ブロックチェーンのバリデーター(ネットワーク参加者)に対して支払うものです。内部スワップを利用した際はメタマスク側のサービス手数料が上乗せされます。
+  </p>
+
+  <h3>メタマスク ログインができない場合はどうすればよいですか</h3>
+  <p>
+    まずはパスワードの入力モードと大小文字を確認してください。半角英数へ切り替えた上で再試行し、それでも解錠できないときは、シードフレーズを用いた復元に進みます。ロック画面の「ウォレットをリセット」または「パスワードを忘れた」からシードフレーズを入力することで、新しいパスワードを設定し直せます。シードフレーズさえ保管できていれば、パスワードの失念は致命傷にはなりません。
+  </p>
+
+  <h3>シードフレーズを紛失した場合は復旧できますか</h3>
+  <p>
+    残念ながら、シードフレーズを失った場合、ウォレット内の資産へアクセスする正当な手段はありません。メタマスクの運営元を含め、シードフレーズを第三者が復元する経路は設計上存在しません。だからこそ、作成直後の段階で物理的な方法による厳重な保管を徹底することが重要です。
+  </p>
+
+  <h3>複数端末で同じウォレットを使えますか</h3>
+  <p>
+    使えます。PCで作成したウォレットをスマートフォン側で「既存ウォレットの復元」からインポートすれば、同じアドレスと残高が両端末で共有されます。どちらか一方で行った送金は即座に他方にも反映されます。ただし、端末が増えるほど漏洩経路も増えるため、常用するのは二台までに留めるのが無難です。
+  </p>
+
+  <h3>取引所のアカウントとメタマスクは同じものですか</h3>
+  <p>
+    別物です。取引所のアカウントは、事業者が利用者の資産を預かるカストディアル型であり、メールアドレスとパスワードによる認証で守られています。一方メタマスクは、利用者本人が鍵を握るノンカストディアル型で、資産は利用者のウォレットアドレス上に直接存在します。取引所からメタマスクへ出金することで、自己管理に切り替えることができます。
+  </p>
+
+  <h2 id="author-bio">執筆者について</h2>
+  <div class="author-card" itemscope itemtype="https://schema.org/Person" itemid="https://metagiga.github.io/#author">
+    <div class="author-avatar" aria-hidden="true">佐</div>
+    <div>
+      <div class="author-name" itemprop="name">佐藤 健一</div>
+      <div class="author-role" itemprop="jobTitle">暗号資産リサーチャー / MetaGiga 編集部</div>
+      <p class="author-bio" itemprop="description">
+        2018年からブロックチェーン業界に従事し、国内外の分散型アプリケーションおよび自己管理型ウォレットの実装レビューを継続的に公開。初心者向けの解説記事から、スマートコントラクトの監査要点まで幅広く扱う。本記事は実機でのインストールおよび設定を確認のうえ執筆しています。
+      </p>
+      <div class="author-links" aria-label="執筆者の外部プロフィール">
+        <a href="https://github.com/metagiga" rel="author noopener" itemprop="sameAs">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 MetaGiga. All rights reserved.<br><span style="font-size:12px;color:var(--ink-muted)">本サイトの情報は教育目的で提供されるものであり、投資助言を構成しません。</span></div>
+    <div class="footer-links">
+      <button type="button" data-open-modal="terms" aria-haspopup="dialog" aria-controls="modal-terms">利用規約</button>
+      <button type="button" data-open-modal="privacy" aria-haspopup="dialog" aria-controls="modal-privacy">プライバシーポリシー</button>
+      <a href="#main">ページ上部へ</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Terms of Service Modal -->
+<div class="modal" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="terms-title" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal aria-hidden="true"></div>
+  <div class="modal-dialog" role="document">
+    <div class="modal-head">
+      <div class="modal-title" id="terms-title" role="heading" aria-level="2">利用規約</div>
+      <button type="button" class="modal-close" data-close-modal aria-label="利用規約を閉じる">×</button>
+    </div>
+    <div class="modal-body">
+      <p>最終更新日:2026年4月19日</p>
+      <div role="heading" aria-level="3">1. 総則</div>
+      <p>本利用規約(以下「本規約」といいます)は、MetaGiga(以下「当サイト」といいます)が運営するウェブサイトおよび関連するコンテンツ(以下総称して「本サービス」といいます)の利用条件を定めるものです。本サービスを利用するすべての方(以下「利用者」といいます)は、本規約に同意したうえで本サービスをご利用ください。</p>
+      <div role="heading" aria-level="3">2. 情報提供の目的</div>
+      <p>当サイトが提供するすべての情報は、教育および情報提供のみを目的としています。特定の投資、取引、金融商品の購入または売却を推奨、勧誘または保証するものではありません。暗号資産の利用に際して生じる判断および結果は、すべて利用者自身の責任において行ってください。</p>
+      <div role="heading" aria-level="3">3. 免責事項</div>
+      <ul>
+        <li>当サイトは情報の正確性および最新性に努めていますが、内容の完全性を保証するものではありません。</li>
+        <li>本サービスの利用に起因して生じたいかなる損害についても、当サイトは責任を負わないものとします。</li>
+        <li>外部サイトへのリンクに関しては、リンク先の内容について当サイトは責任を負いません。</li>
+        <li>ブロックチェーン関連の仕様およびサービスは頻繁に変更されます。実行前に各プロジェクトの公式情報を必ず確認してください。</li>
+      </ul>
+      <div role="heading" aria-level="3">4. 知的財産権</div>
+      <p>本サービスに含まれる文章、画像、コード、その他のコンテンツの著作権は、当サイトまたは正当な権利者に帰属します。私的利用の範囲を超えた複製、転載、配布、改変はこれを禁じます。引用の際は、出典の明示と適切な引用ルールの遵守をお願いします。</p>
+      <div role="heading" aria-level="3">5. 禁止事項</div>
+      <ul>
+        <li>法令または公序良俗に違反する行為</li>
+        <li>他の利用者、第三者、または当サイトの権利を侵害する行為</li>
+        <li>当サイトのサーバーに過度の負荷をかける行為</li>
+        <li>本サービスを通じて得た情報を悪用する行為</li>
+      </ul>
+      <div role="heading" aria-level="3">6. 本規約の変更</div>
+      <p>当サイトは必要に応じて本規約を変更することがあります。変更後の内容は、当サイト上に掲載された時点で効力を生じるものとし、利用者は変更後も継続して本サービスを利用することで、変更後の規約に同意したものとみなします。</p>
+      <div role="heading" aria-level="3">7. 準拠法および裁判管轄</div>
+      <p>本規約の解釈および適用は日本法に準拠するものとし、本サービスに関して紛争が生じた場合は、当サイト運営者の住所地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div class="modal" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal aria-hidden="true"></div>
+  <div class="modal-dialog" role="document">
+    <div class="modal-head">
+      <div class="modal-title" id="privacy-title" role="heading" aria-level="2">プライバシーポリシー</div>
+      <button type="button" class="modal-close" data-close-modal aria-label="プライバシーポリシーを閉じる">×</button>
+    </div>
+    <div class="modal-body">
+      <p>最終更新日:2026年4月19日</p>
+      <div role="heading" aria-level="3">1. 基本方針</div>
+      <p>MetaGiga(以下「当サイト」といいます)は、利用者のプライバシーを尊重し、個人情報の保護に関する法律およびその他関連する法令を遵守します。本プライバシーポリシーは、当サイトが取り扱う情報の種類、利用目的、管理方法を定めるものです。</p>
+      <div role="heading" aria-level="3">2. 取得する情報</div>
+      <ul>
+        <li><strong>アクセスログ:</strong>IPアドレス、ブラウザの種類、参照元URL、閲覧日時、閲覧ページ等の情報を自動的に取得する場合があります。</li>
+        <li><strong>Cookie:</strong>利用者の利便性向上および利用状況の分析を目的として、Cookieおよび類似技術を用いることがあります。</li>
+        <li><strong>任意提供情報:</strong>お問い合わせフォーム等から提供された情報(連絡先など)。</li>
+      </ul>
+      <div role="heading" aria-level="3">3. 利用目的</div>
+      <ul>
+        <li>本サービスの提供、維持および改善</li>
+        <li>アクセス状況の統計的分析</li>
+        <li>お問い合わせへの対応</li>
+        <li>不正アクセスまたは不正利用の防止</li>
+      </ul>
+      <div role="heading" aria-level="3">4. 第三者提供</div>
+      <p>当サイトは、法令に基づく場合または利用者の事前の同意がある場合を除き、取得した情報を第三者に提供しません。統計的に処理され、個人を特定できない形に加工された情報はこの限りではありません。</p>
+      <div role="heading" aria-level="3">5. 外部サービスの利用</div>
+      <p>当サイトは、アクセス解析のためにGoogle Analyticsを含む外部サービスを利用する場合があります。これらのサービスはCookieを利用して匿名のトラフィック情報を収集します。各サービスのデータ取り扱いについては、提供元のプライバシーポリシーをご確認ください。</p>
+      <div role="heading" aria-level="3">6. Cookieの管理</div>
+      <p>利用者はブラウザの設定によりCookieの受け入れを拒否することができます。ただし、Cookieを無効化した場合、本サービスの一部機能が正常に動作しない可能性があります。</p>
+      <div role="heading" aria-level="3">7. 機密情報の取り扱いに関する注意</div>
+      <p>当サイトは、暗号資産ウォレットの秘密鍵、シークレットリカバリーフレーズ、パスワード等の機密情報を取得、保持することは一切ありません。いかなる場合であっても、当サイトがこれらの情報を利用者に求めることはありません。</p>
+      <div role="heading" aria-level="3">8. 情報の保護</div>
+      <p>当サイトは、取得した情報の漏洩、滅失、毀損を防止するため、合理的かつ適切な安全管理措置を講じます。ただし、通信経路上での完全な安全性を保証するものではありません。</p>
+      <div role="heading" aria-level="3">9. ポリシーの変更</div>
+      <p>本ポリシーの内容は、法令改正その他の理由により、予告なく変更されることがあります。変更後の内容は、当サイトへの掲載をもって効力を生じるものとします。</p>
+      <div role="heading" aria-level="3">10. お問い合わせ</div>
+      <p>本ポリシーに関するお問い合わせは、当サイトのお問い合わせ窓口までご連絡ください。</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){"use strict";
+var last=null,open=null,FOC='a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"]),input:not([disabled]),select:not([disabled]),textarea:not([disabled])';
+var main=document.getElementById("main"),hdr=document.querySelector(".site-header"),ftr=document.querySelector(".site-footer"),crumb=document.querySelector(".crumb");
+function setInert(on){[main,hdr,ftr,crumb].forEach(function(el){if(!el)return;if(on)el.setAttribute("inert","");else el.removeAttribute("inert");});}
+function openModal(id){var m=document.getElementById("modal-"+id);if(!m)return;last=document.activeElement;m.setAttribute("aria-hidden","false");document.body.classList.add("modal-open");open=m;setInert(true);var f=m.querySelector(".modal-close");if(f)f.focus();}
+function closeModal(){if(!open)return;open.setAttribute("aria-hidden","true");document.body.classList.remove("modal-open");setInert(false);if(last&&typeof last.focus==="function")last.focus();open=null;}
+function trap(e){if(!open||e.key!=="Tab")return;var n=open.querySelectorAll(FOC);if(!n.length){e.preventDefault();return;}var f=n[0],l=n[n.length-1];if(e.shiftKey&&document.activeElement===f){l.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===l){f.focus();e.preventDefault();}}
+document.addEventListener("click",function(e){var o=e.target.closest("[data-open-modal]");if(o){e.preventDefault();openModal(o.getAttribute("data-open-modal"));return;}var c=e.target.closest("[data-close-modal]");if(c){e.preventDefault();closeModal();}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&open){closeModal();return;}trap(e);});
+var tgl=document.getElementById("nav-toggle"),nav=document.getElementById("primary-nav");
+if(tgl&&nav){tgl.addEventListener("click",function(){var o=nav.classList.toggle("open");tgl.setAttribute("aria-expanded",o?"true":"false");tgl.setAttribute("aria-label",o?"メニューを閉じる":"メニューを開く");});nav.addEventListener("click",function(e){if(e.target.tagName==="A"&&window.matchMedia("(max-width:720px)").matches){nav.classList.remove("open");tgl.setAttribute("aria-expanded","false");tgl.setAttribute("aria-label","メニューを開く");}});}
+})();
+</script>
+
+</body>
+</html>

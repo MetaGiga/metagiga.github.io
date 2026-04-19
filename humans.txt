@@ -1,0 +1,14 @@
+/* TEAM */
+Site: MetaGiga
+URL: https://metagiga.github.io/
+Language: Japanese (ja-JP)
+
+Author: 佐藤 健一 (Sato Kenichi)
+Role: Crypto Research & Editorial
+Location: Tokyo, Japan
+
+/* SITE */
+Last update: 2026-04-19
+Standards: HTML5, CSS3, WCAG 2.2 AA
+Components: Semantic HTML, JSON-LD, Open Graph, Schema.org
+Software: hand-crafted static site
